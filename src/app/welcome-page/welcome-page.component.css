@@ -1,0 +1,28 @@
+html,body{
+    overflow-y: hidden;
+}
+
+#welcome-name{
+    font-size: 100px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 20px;
+}
+.vert-center{
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+    margin-top: 100px;
+    text-align: center;
+}
+.bottom-right{
+    position: fixed;
+    bottom: 0;
+    right:0;
+    margin:5px; 
+}
+.mat-raised-button{
+    width: 20%;
+    height: 50px;
+    font-size: 200%;
+}
