@@ -1,0 +1,34 @@
+html,body{
+    overflow-y: hidden;
+}
+
+#teacher-login{
+    font-size: 100px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 20px;
+}
+.vert-center{
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+.bottom-right{
+    position: fixed;
+    bottom: 0;
+    right:0;
+    margin:5px; 
+}
+.mat-raised-button{
+    position: fixed;
+    width: 30%;
+    height: 60px;
+    font-size: 200%;
+}
+.bottom-left{
+    bottom: 0;
+    left: 0;
+    margin: 5px;
+}
