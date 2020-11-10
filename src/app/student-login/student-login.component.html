@@ -3,8 +3,22 @@
 <body>
     <h1 id="student-login">Student Login</h1>
     <div class="vert-center" style="margin-top:50px;">
-        <button mat-raised-button>Login</button>
-        <button mat-raised-button>Forgot Password</button>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="Enter username" required="true">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" placeholder="Enter password" required="true">
+              </mat-form-field>
+        </p>
+        <div style="margin-top: 50px;">
+            <button mat-raised-button id="login">Login</button>
+            <button mat-raised-button id="forgot-password">Forgot Password</button>    
+        </div>
     </div>
     <div class="bottom">
         <button mat-button>

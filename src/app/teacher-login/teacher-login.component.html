@@ -3,27 +3,42 @@
 <body>
     <h1 id="teacher-login">Teacher Login</h1>
     <div class="vert-center" style="margin-top:50px;">
-        <button mat-raised-button>Login</button>
-        <button mat-raised-button>Forgot Password</button>
-    </div>
-    <div class="bottom-left">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="Enter username" required="true">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" placeholder="Enter password" required="true">
+              </mat-form-field>
+        </p>
+        <div style="margin-top: 50px;">
+            <button mat-raised-button id="login">Login</button>
+            <button mat-raised-button id="forgot-password">Forgot Password</button>    
+        </div>    </div>
+    <div class="bottom">
         <button mat-button>
-            Back
-            <mat-icon>replay</mat-icon>
+            <div class="large">
+                Back 
+                <mat-icon>replay</mat-icon>
+            </div>
         </button>
-        <div class="bottom-right">
-            <button mat-button>
-                Settings
-                <mat-icon>settings</mat-icon>
-            </button>
-            <button mat-button>
-                Help
-                <mat-icon>help</mat-icon>
-            </button>
-            <button mat-button>
-                Contact
-                <mat-icon>contact_mail</mat-icon>
-            </button>
-        </div>
+    </div>
+    <div class="bottom-right">
+        <button mat-button>
+            Settings
+            <mat-icon>settings</mat-icon>
+        </button>
+        <button mat-button>
+            Help
+            <mat-icon>help</mat-icon>
+        </button>
+        <button mat-button>
+            Contact
+            <mat-icon>contact_mail</mat-icon>
+        </button>
     </div>
 </body>

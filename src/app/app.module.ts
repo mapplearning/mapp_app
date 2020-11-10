@@ -11,6 +11,8 @@ import { StudentLoginComponent } from './student-login/student-login.component';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { TeacherLoginComponent } from './teacher-login/teacher-login.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { TeacherLoginComponent } from './teacher-login/teacher-login.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
