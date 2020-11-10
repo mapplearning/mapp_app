@@ -1,2 +1,3 @@
-<app-student-login></app-student-login>
-<app-teacher-login></app-teacher-login>
+<app-welcome-page *ngIf="router.url == '/'"></app-welcome-page>
+<app-student-login *ngIf="router.url == '/student-login'"></app-student-login>
+<app-teacher-login *ngIf="router.url == '/teacher-login'"></app-teacher-login>

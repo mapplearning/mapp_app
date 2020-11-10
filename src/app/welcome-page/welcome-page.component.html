@@ -3,8 +3,8 @@
 <body>
     <h1 id="welcome-name">Welcome to mapp!</h1>
     <div class="vert-center">
-        <button mat-raised-button style="margin-right: 50px;">Student Login</button>
-        <button mat-raised-button>Teacher Login</button>
+        <button (click)="onStudentLoginClick()" mat-raised-button style="margin-right: 50px;">Student Login</button>
+        <button (click)="onTeacherLoginClick()" mat-raised-button>Teacher Login</button>
     </div>
     <div class="vert-center" style="margin-top:50px;">
         <button mat-raised-button id="create-acc">Create Account</button>
