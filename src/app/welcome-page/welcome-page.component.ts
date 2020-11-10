@@ -20,7 +20,9 @@ export class WelcomePageComponent implements OnInit {
   }
   onTeacherLoginClick(){
     this.router.navigate(['/teacher-login']);
-
+  }
+  onCreateAccClick(){
+    this.router.navigate(['/create-account']);
   }
 
 }

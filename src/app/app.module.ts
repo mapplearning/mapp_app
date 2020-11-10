@@ -13,6 +13,8 @@ import {ErrorStateMatcher} from '@angular/material/core';
 import { TeacherLoginComponent } from './teacher-login/teacher-login.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { CreateNewAccountComponent } from './create-new-account/create-new-account.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import {MatInputModule} from '@angular/material/input';
     AppComponent,
     WelcomePageComponent,
     StudentLoginComponent,
-    TeacherLoginComponent
+    TeacherLoginComponent,
+    CreateNewAccountComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import {MatInputModule} from '@angular/material/input';
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
