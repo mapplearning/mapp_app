@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
-  selector: 'app-create-new-account',
-  templateUrl: './create-new-account.component.html',
-  styleUrls: ['./create-new-account.component.css']
+  selector: 'app-forgot-password',
+  templateUrl: './forgot-password.component.html',
+  styleUrls: ['./forgot-password.component.css']
 })
-export class CreateNewAccountComponent implements OnInit {
+export class ForgotPasswordComponent implements OnInit {
 
   constructor(private router: Router) { }
 

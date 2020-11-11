@@ -17,15 +17,13 @@
         </p>
         <div style="margin-top: 50px;">
             <button mat-raised-button id="login">Login</button>
-            <button mat-raised-button id="forgot-password">Forgot Password</button>    
+            <button mat-raised-button (click)="onClickForgotPassword()" id="forgot-password">Forgot Password</button>    
         </div>
     </div>
     <div class="bottom">
-        <button mat-button>
-            <div class="large">
-                Back 
-                <mat-icon>replay</mat-icon>
-            </div>
+        <button (click)="onBackButtonClick()" mat-button>
+            Back 
+            <mat-icon>replay</mat-icon> 
         </button>
     </div>
     <div class="bottom-right">

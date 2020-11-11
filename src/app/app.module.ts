@@ -15,6 +15,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { CreateNewAccountComponent } from './create-new-account/create-new-account.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     WelcomePageComponent,
     StudentLoginComponent,
     TeacherLoginComponent,
-    CreateNewAccountComponent
+    CreateNewAccountComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-teacher-login',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./teacher-login.component.css']
 })
 export class TeacherLoginComponent implements OnInit {
-
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  onBackButtonClick(){
+    this.router.navigate(['/']);
+  }
+  onClickForgotPassword(){
+    this.router.navigate(['/forgot-password']);
+  }
 }
