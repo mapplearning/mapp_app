@@ -22,5 +22,10 @@ export class WelcomePageComponent implements OnInit {
   onCreateAccClick(){
     this.router.navigate(['/create-account']);
   }
-
+  onContactClick(){
+    this.router.navigate(['/contact-page']);
+  }
+  onHelpPageClick(){
+    this.router.navigate(['/help-page']);
+  }
 }

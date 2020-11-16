@@ -1,0 +1,25 @@
+html,body{
+    overflow-y: hidden;
+}
+.vert-center{
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+    margin-top: 80px;
+    text-align: center;
+}
+#header{
+    font-size: 80px;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+.bottom{
+    position: fixed;
+    bottom: 0;
+    margin: 5px;
+}
+.mat-form-field{
+    width: 80%;
+    padding-bottom: 5px;
+}

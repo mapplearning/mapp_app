@@ -1,0 +1,25 @@
+<h1 id="header">Contact Page</h1>
+<body class="vert-center">
+    <mat-tab-group mat-stretch-tabs dynamicHeight animationDuration="0ms" class="example-stretched-tabs mat-elevation-z4">
+        <mat-tab label="Contact Form" >
+            <div style="margin-top: 20px;">
+                <p>
+                    <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Enter email" required="true">
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input matInput placeholder="Enter username" required="true">
+                    </mat-form-field>
+                </p>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</body>
+<button class="bottom" (click)="onBackButtonClick()" mat-button>
+    Back 
+    <mat-icon>replay</mat-icon> 
+</button>

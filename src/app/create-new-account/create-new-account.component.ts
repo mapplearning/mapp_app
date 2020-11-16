@@ -16,4 +16,10 @@ export class CreateNewAccountComponent implements OnInit {
   onBackButtonClick(){
     this.router.navigate(['/']);
   }
+  onContactClick(){
+    this.router.navigate(['/contact-page']);
+  }
+  onHelpPageClick(){
+    this.router.navigate(['/help-page']);
+  }
 }

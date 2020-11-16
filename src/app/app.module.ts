@@ -16,6 +16,8 @@ import {MatInputModule} from '@angular/material/input';
 import { CreateNewAccountComponent } from './create-new-account/create-new-account.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
+import { HelpPageComponent } from './help-page/help-page.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     StudentLoginComponent,
     TeacherLoginComponent,
     CreateNewAccountComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    ContactPageComponent,
+    HelpPageComponent
   ],
   imports: [
     BrowserModule,
