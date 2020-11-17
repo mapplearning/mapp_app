@@ -16,6 +16,8 @@ import {MatInputModule} from '@angular/material/input';
 import { CreateNewAccountComponent } from './create-new-account/create-new-account.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { AsteroidGamePageComponent } from './asteroid-game-page/asteroid-game-page.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     StudentLoginComponent,
     TeacherLoginComponent,
     CreateNewAccountComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    AsteroidGamePageComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTabsModule
+    MatTabsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

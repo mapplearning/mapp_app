@@ -1,0 +1,21 @@
+<body>
+    <hr class="rounded">
+
+    <div class="under-red">
+        <div class="left">
+            <h2 class="mat-typography lives">Lives</h2>
+            <mat-icon>favorite</mat-icon>
+            <mat-icon>favorite</mat-icon>
+            <mat-icon>favorite</mat-icon>
+
+        </div>
+        <div class="middle">
+            <h2 class="mat-typography" style="margin-bottom: 5px;">{{num1}} + {{num2}} =</h2>
+            <mat-form-field appearance="outline" style="width: 18%;">
+                <input matInput placeholder="Type the answer to destroy the asteroids!" [(ngModel)]='answerVal' (keydown.enter)="submitAnswer(answerVal)">
+            </mat-form-field>
+            <div *ngIf="ifWrong" class="mat-typography" id="wrong-answer">Oops! Try again!</div>
+        </div>
+
+    </div>
+</body>
