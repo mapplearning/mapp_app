@@ -1,0 +1,8 @@
+.asteroids{
+    width: 8%;
+    transform: rotate(45deg);
+    position: absolute;
+}
+.asteroid-container{
+    margin-left: 40px;
+}

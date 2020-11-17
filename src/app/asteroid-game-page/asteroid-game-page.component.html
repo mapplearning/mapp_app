@@ -1,12 +1,16 @@
 <body>
-    <div>Score: {{score}}</div>
-    <div class="container">
+    <app-asteroid-object *ngIf="start" [start]="start" ></app-asteroid-object>
+    <div class="mat-typography">Score: {{score}}</div>
+    <!-- <div class="container">
         <div class="progress vertical">
           <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
           </div>  
         </div>
-    </div>
+    </div> -->
     <hr class="rounded">
+    <!-- <div *ngIf="start">
+        <img class="asteroids" src="../assets/images/asteroid.png" [style.left.px]="x" [style.top.px]="y">
+    </div> -->
 
     <div class="under-red">
         <div class="left">
@@ -19,7 +23,7 @@
         <div class="middle">
             <h2 class="mat-typography" style="margin-bottom: 5px;">{{num1}} {{sign}} {{num2}} {{equals}}</h2>
             <mat-form-field appearance="outline" style="width: 18%;" class='middle'>
-                <input matInput placeholder={{answer_field}} [(ngModel)]='answerVal' (keydown.enter)="submitAnswer(answerVal)">
+                <input type="number" matInput placeholder={{answer_field}} [(ngModel)]='answerVal' (keydown.enter)="submitAnswer(answerVal)">
             </mat-form-field>
             <div *ngIf="ifWrong" class="mat-typography" id="wrong-answer">Oops! Try again!</div>
         </div>

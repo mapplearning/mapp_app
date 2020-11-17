@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-asteroid-game-page',
   templateUrl: './asteroid-game-page.component.html',
-  styleUrls: ['./asteroid-game-page.component.css']
+  styleUrls: ['./asteroid-game-page.component.css'],
+
 })
+
 export class AsteroidGamePageComponent implements OnInit {
   answerVal: string;
   numAns: number;
@@ -26,7 +29,6 @@ export class AsteroidGamePageComponent implements OnInit {
     this.router.navigate(['/']);
   }
   onStartClick(){
-    if (!this.start)
       this.start = true;
       this.num1 = Math.floor(Math.random() * 10) + 1;
       this.num2 = Math.floor(Math.random() * 10) + 1;
@@ -42,21 +44,16 @@ export class AsteroidGamePageComponent implements OnInit {
   }
 
   submitAnswer(answerVal){
-    if(!(/^[0-9]+$/.test(answerVal))){
-      this.ifWrong = true;
+    this.ifWrong = false;
+    this.numAns = Number(answerVal);  
+    this.answerVal = null;
+    if(this.num1 + this.num2 == this.numAns){
+      this.score++;
+      this.num1 = Math.floor(Math.random() * 10) + 1;
+      this.num2 = Math.floor(Math.random() * 10) + 1; 
     }
     else{
-      this.ifWrong = false;
-      this.numAns = Number(answerVal);  
-      this.answerVal = null;
-      if(this.num1 + this.num2 == this.numAns){
-        this.score++
-        this.num1 = Math.floor(Math.random() * 10) + 1;
-        this.num2 = Math.floor(Math.random() * 10) + 1; 
-      }
-      else{
-        this.ifWrong = true;
-      }
+      this.ifWrong = true;
     }
   }
 }

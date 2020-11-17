@@ -20,6 +20,7 @@ import { AsteroidGamePageComponent } from './asteroid-game-page/asteroid-game-pa
 import { FormsModule } from '@angular/forms';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { HelpPageComponent } from './help-page/help-page.component';
+import { AsteroidObjectComponent } from './asteroid-object/asteroid-object.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { HelpPageComponent } from './help-page/help-page.component';
     ForgotPasswordComponent,
     AsteroidGamePageComponent,
     ContactPageComponent,
-    HelpPageComponent
+    HelpPageComponent,
+    AsteroidObjectComponent
   ],
   imports: [
     BrowserModule,
