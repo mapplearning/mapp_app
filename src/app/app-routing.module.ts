@@ -7,6 +7,7 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { HelpPageComponent } from './help-page/help-page.component';
+import { AsteroidGamePageComponent } from './asteroid-game-page/asteroid-game-page.component';
 
 const routes: Routes = [
   { path: 'student-login', component: StudentLoginComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: '' , component: WelcomePageComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'contact-page', component: ContactPageComponent },
-  { path: 'help-page', component: HelpPageComponent }
+  { path: 'help-page', component: HelpPageComponent },
+  { path: 'asteroid-game-page', component: AsteroidGamePageComponent},
 ];
 
 @NgModule({

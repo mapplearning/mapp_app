@@ -43,7 +43,8 @@ import { HelpPageComponent } from './help-page/help-page.component';
     MatFormFieldModule,
     MatInputModule,
     MatTabsModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

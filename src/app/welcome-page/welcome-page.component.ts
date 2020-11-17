@@ -28,4 +28,7 @@ export class WelcomePageComponent implements OnInit {
   onHelpPageClick(){
     this.router.navigate(['/help-page']);
   }
+  onAsteroidGameClick(){
+    this.router.navigate(['/asteroid-game-page'])
+  }
 }

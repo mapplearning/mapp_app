@@ -41,3 +41,31 @@ hr.rounded {
 ::ng-deep .mat-form-field-wrapper{
     margin-bottom: -1.25em!important;
  }
+ .bottom-right{
+    position: fixed;
+    bottom: 0;
+    right:0;
+    margin:5px; 
+}
+.bottom{
+    position: fixed;
+    bottom: 0;
+    margin: 5px;
+}
+.container {
+  margin-top: 40px;
+  padding-top: 20px;
+}
+.vertical {
+  display: inline-block;
+  width: 20%;
+  height: 40px;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.vertical {
+  box-shadow: inset 0px 4px 6px rgb(250, 250, 250);
+}
+.progress-bar {
+  box-shadow: inset 0px 4px 6px rgba(112, 38, 38, 0.6);
+}
