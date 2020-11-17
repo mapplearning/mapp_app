@@ -16,13 +16,10 @@ import {MatInputModule} from '@angular/material/input';
 import { CreateNewAccountComponent } from './create-new-account/create-new-account.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-<<<<<<< HEAD
 import { AsteroidGamePageComponent } from './asteroid-game-page/asteroid-game-page.component';
 import { FormsModule } from '@angular/forms';
-=======
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { HelpPageComponent } from './help-page/help-page.component';
->>>>>>> 64d8a7bd144c553df28b3e1cba3e5386ca04b6c2
 
 
 @NgModule({
@@ -33,7 +30,7 @@ import { HelpPageComponent } from './help-page/help-page.component';
     TeacherLoginComponent,
     CreateNewAccountComponent,
     ForgotPasswordComponent,
-    AsteroidGamePageComponent
+    AsteroidGamePageComponent,
     ContactPageComponent,
     HelpPageComponent
   ],
