@@ -18,4 +18,10 @@ export class TeacherLoginComponent implements OnInit {
   onClickForgotPassword(){
     this.router.navigate(['/forgot-password']);
   }
+  onContactClick(){
+    this.router.navigate(['/contact-page']);
+  }
+  onHelpPageClick(){
+    this.router.navigate(['/help-page']);
+  }
 }
