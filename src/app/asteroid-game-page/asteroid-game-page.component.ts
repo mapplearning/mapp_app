@@ -21,6 +21,7 @@ export class AsteroidGamePageComponent implements OnInit {
   answer_field: string;
   score: number;
   score_label: string;
+  start_asteroid: boolean;
 
   constructor(private router: Router) { }
 
@@ -28,8 +29,13 @@ export class AsteroidGamePageComponent implements OnInit {
     this.start = false;
     this.router.navigate(['/']);
   }
+  resetAsteroid(){
+    this.start_asteroid = !this.start_asteroid;
+    this.start = !this.start;
+  }
   onStartClick(){
       this.start = true;
+      this.start_asteroid = false;
       this.num1 = Math.floor(Math.random() * 10) + 1;
       this.num2 = Math.floor(Math.random() * 10) + 1;
       this.equals = '=';
@@ -44,16 +50,21 @@ export class AsteroidGamePageComponent implements OnInit {
   }
 
   submitAnswer(answerVal){
+    this.start = !this.start;
+    this.start_asteroid = !this.start;
     this.ifWrong = false;
     this.numAns = Number(answerVal);  
     this.answerVal = null;
     if(this.num1 + this.num2 == this.numAns){
       this.score++;
       this.num1 = Math.floor(Math.random() * 10) + 1;
-      this.num2 = Math.floor(Math.random() * 10) + 1; 
+      this.num2 = Math.floor(Math.random() * 10) + 1;
+      this.start = !this.start;
+      this.start_asteroid = !this.start;
     }
     else{
       this.ifWrong = true;
+      this.start_asteroid = true;
     }
   }
 }

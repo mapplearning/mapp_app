@@ -14,16 +14,21 @@ import {
   styleUrls: ['./asteroid-object.component.css'],
   animations: [
     trigger('startFiring', [
-      state('in', style({ transform: 'translateY(10)' })),
-      transition ( ':enter',[
-        style({transform: 'translateY(+100px)'}),
-        animate(100)
+      state('out', style({ 
+        height: '-50px'
+      })),
+      state('bottom', style({
+        height: '1000px'
+      })),
+      transition('out => bottom', [
+        animate('5s')
     ])
 
     ])
   ]
 })
 export class AsteroidObjectComponent implements OnInit {
+  @Input() start_asteroid: boolean;
   @Input() start: boolean;
 
   x: number;
@@ -32,9 +37,9 @@ export class AsteroidObjectComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.x = (Math.floor(Math.random() * 1000) + 1);
-    this.y = -130;
-    this.startFiring = "in";
-  }
-
+    this.x = (Math.floor(Math.random() * 1000) + 100);
+    this.y = 10;
+  }  
 }
+
+

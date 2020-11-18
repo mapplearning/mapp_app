@@ -1,4 +1,5 @@
 <body>
+    <app-asteroid-object *ngIf="start_asteroid" [start_asteroid]="start_asteroid" ></app-asteroid-object>
     <app-asteroid-object *ngIf="start" [start]="start" ></app-asteroid-object>
     <div class="mat-typography">Score: {{score}}</div>
     <!-- <div class="container">
@@ -23,7 +24,8 @@
         <div class="middle">
             <h2 class="mat-typography" style="margin-bottom: 5px;">{{num1}} {{sign}} {{num2}} {{equals}}</h2>
             <mat-form-field appearance="outline" style="width: 18%;" class='middle'>
-                <input type="number" matInput placeholder={{answer_field}} [(ngModel)]='answerVal' (keydown.enter)="submitAnswer(answerVal)">
+                <input type="number" matInput placeholder={{answer_field}} [(ngModel)]='answerVal' 
+                (keydown.enter)="submitAnswer(answerVal);resetAsteroid()">
             </mat-form-field>
             <div *ngIf="ifWrong" class="mat-typography" id="wrong-answer">Oops! Try again!</div>
         </div>
