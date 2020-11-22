@@ -1,7 +1,7 @@
 <body>
-    <app-asteroid-object *ngIf="start_asteroid" [start_asteroid]="start_asteroid" ></app-asteroid-object>
-    <app-asteroid-object *ngIf="start" [start]="start" ></app-asteroid-object>
-    <div class="mat-typography">Score: {{score}}</div>
+    <app-asteroid-object *ngIf="start_asteroid" [start_asteroid]="start_asteroid" [lives] = "lives" [correctAnswer]="correctAnswer" (hitTheLine)="calcLives($event)"></app-asteroid-object>
+    <app-asteroid-object *ngIf="start" [start]="start" [lives] = "lives" [correctAnswer]="correctAnswer" (hitTheLine)="calcLives($event)"></app-asteroid-object>
+    <div class="mat-typography score">Score: {{score}}</div>
     <!-- <div class="container">
         <div class="progress vertical">
           <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
@@ -16,9 +16,9 @@
     <div class="under-red">
         <div class="left">
             <h2 class="mat-typography lives">Lives</h2>
-            <mat-icon>favorite</mat-icon>
-            <mat-icon>favorite</mat-icon>
-            <mat-icon>favorite</mat-icon>
+            <mat-icon *ngIf="oneLife">favorite</mat-icon>
+            <mat-icon *ngIf="twoLives">favorite</mat-icon>
+            <mat-icon *ngIf="threeLives">favorite</mat-icon>
 
         </div>
         <div class="middle">

@@ -69,6 +69,10 @@ hr.rounded {
 .progress-bar {
   box-shadow: inset 0px 4px 6px rgba(112, 38, 38, 0.6);
 }
+.score{
+  margin-top: 5px;
+  margin-left: 5px;
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

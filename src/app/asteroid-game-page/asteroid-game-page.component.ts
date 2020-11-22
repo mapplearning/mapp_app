@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ThrowStmt } from '@angular/compiler';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 
@@ -22,8 +23,23 @@ export class AsteroidGamePageComponent implements OnInit {
   score: number;
   score_label: string;
   start_asteroid: boolean;
+  lives: number;
+  oneLife: boolean;
+  twoLives: boolean;
+  threeLives: boolean;
+  private correctAnswer: EventEmitter<boolean> = new EventEmitter();
 
   constructor(private router: Router) { }
+
+  ngOnInit(): void { 
+    this.ifWrong = false;
+    this.answer_field = 'Press Start Game!';
+    this.start = false;
+    this.lives = 3;
+    this.oneLife = true;
+    this.twoLives = true;
+    this.threeLives = true;
+  }
 
   onBackButtonClick(){
     this.start = false;
@@ -42,12 +58,9 @@ export class AsteroidGamePageComponent implements OnInit {
       this.sign = '+';
       this.answer_field = 'Answer to Blast Asteroid!';
       this.score = 0;
+      this.correctAnswer.emit(false);
   }
-  ngOnInit(): void { 
-    this.ifWrong = false;
-    this.answer_field = 'Press Start Game!';
-    this.start = false;
-  }
+
 
   submitAnswer(answerVal){
     this.start = !this.start;
@@ -61,10 +74,30 @@ export class AsteroidGamePageComponent implements OnInit {
       this.num2 = Math.floor(Math.random() * 10) + 1;
       this.start = !this.start;
       this.start_asteroid = !this.start;
+      this.correctAnswer.emit(true)
     }
     else{
       this.ifWrong = true;
       this.start_asteroid = true;
+      this.correctAnswer.emit(false)
     }
+    this.correctAnswer.emit(false)
+  }
+  calcLives(lives){
+    console.log("lives");
+    console.log(this.lives)
+    this.lives--;
+    if(this.lives == 2){
+      this.threeLives = false;
+      this.resetAsteroid();
+    }
+    else if(this.lives == 1){
+      this.twoLives = false;
+      this.resetAsteroid();
+    }
+    else{
+      this.oneLife = false;
+    }
+
   }
 }
