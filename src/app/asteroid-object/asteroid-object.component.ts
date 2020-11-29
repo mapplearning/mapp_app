@@ -38,8 +38,6 @@ export class AsteroidObjectComponent implements OnInit {
   @Input() private correctAnswer: EventEmitter<boolean>;
   @Output() hitTheLine = new EventEmitter<number>();
 
-  me_astr: boolean;
-  me_start: boolean;
   x: number;
   y: number;
   interval;
@@ -65,6 +63,9 @@ export class AsteroidObjectComponent implements OnInit {
     this.interval = setInterval(() => {
       if(this.timeLeft > 0) {
         this.timeLeft--;
+        console.log(this.timeLeft)
+        console.log(this.start)
+        console.log(this.start_asteroid)
       }
       if(this.correctAnswer){
         this.correctAnswer.subscribe(() =>{

@@ -21,7 +21,8 @@ import { FormsModule } from '@angular/forms';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { HelpPageComponent } from './help-page/help-page.component';
 import { AsteroidObjectComponent } from './asteroid-object/asteroid-object.component';
-
+import { GameOverDialogComponent } from './game-over-dialog/game-over-dialog.component';
+import { MatDialog, MatDialogConfig, MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AsteroidObjectComponent } from './asteroid-object/asteroid-object.compo
     AsteroidGamePageComponent,
     ContactPageComponent,
     HelpPageComponent,
-    AsteroidObjectComponent
+    AsteroidObjectComponent,
+    GameOverDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -46,9 +48,10 @@ import { AsteroidObjectComponent } from './asteroid-object/asteroid-object.compo
     MatInputModule,
     MatTabsModule,
     FormsModule,
-    
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [GameOverDialogComponent]
 })
 export class AppModule { }

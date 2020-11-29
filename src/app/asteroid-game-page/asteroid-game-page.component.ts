@@ -1,6 +1,8 @@
 import { ThrowStmt } from '@angular/compiler';
 import { Component, EventEmitter, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { GameOverDialogComponent } from '../game-over-dialog/game-over-dialog.component';
 
 
 @Component({
@@ -29,16 +31,12 @@ export class AsteroidGamePageComponent implements OnInit {
   threeLives: boolean;
   private correctAnswer: EventEmitter<boolean> = new EventEmitter();
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public gameOver: MatDialog) { }
 
   ngOnInit(): void { 
     this.ifWrong = false;
     this.answer_field = 'Press Start Game!';
     this.start = false;
-    this.lives = 3;
-    this.oneLife = true;
-    this.twoLives = true;
-    this.threeLives = true;
   }
 
   onBackButtonClick(){
@@ -59,8 +57,11 @@ export class AsteroidGamePageComponent implements OnInit {
       this.answer_field = 'Answer to Blast Asteroid!';
       this.score = 0;
       this.correctAnswer.emit(false);
+      this.lives = 3;
+      this.oneLife = true;
+      this.twoLives = true;
+      this.threeLives = true;
   }
-
 
   submitAnswer(answerVal){
     this.start = !this.start;
@@ -97,6 +98,17 @@ export class AsteroidGamePageComponent implements OnInit {
     }
     else{
       this.oneLife = false;
+      const dialogRef = this.gameOver.open(GameOverDialogComponent);
+
+      dialogRef.componentInstance.gameDialogClicked.subscribe(result => {
+        if(result == "restart"){
+          this.onStartClick();
+          this.resetAsteroid();
+        }
+        else{
+          this.onBackButtonClick();
+        }
+      });
     }
 
   }
